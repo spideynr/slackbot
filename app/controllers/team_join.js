@@ -18,9 +18,9 @@ module.exports = (message) => {
    * @see https://api.slack.com/docs/formatting
    */
   var response = `<@${user.id}|${user.name}> Hello! ` +
-                 `This is the advanced AI(a level beyond R2D2) bot built by the Athens-Devs team. I am welcoming you aboard. ` +
+                 `This is the advanced AI(a level beyond R2D2) bot built by the Athens-Devs team. I am welcoming you aboard! ` +
                  `This is the <#${generalChannel.id}|${generalChannel.name}> channel where we usually hang out. There is also the <#${codingChannel.id}|${codingChannel.name}>, the <#${events.id}|${events.name}> to get involved in our community and see what events are available, the <#${jobsChannel.id}|${jobsChannel.name}> to post a job and many more. ` +
-                 `Also showcase your projects and get feeback at the <#${showcaseChannel.id}|${showcaseChannel.name}> channel`;
+                 `Also you can showcase your projects and get feeback at the <#${showcaseChannel.id}|${showcaseChannel.name}> channel. Welcome again and we expect to hear from you!`;
 
   webClient.dm.open(user.id,function(err,data){
     rtmClient.sendMessage(response,data.channel.id,function(){
